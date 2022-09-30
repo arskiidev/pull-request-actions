@@ -1,0 +1,15 @@
+name: JobTest
+
+on:
+  workflow_dispatch:
+
+jobs:
+  JobTest:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Get Runs
+        run: |
+          echo action from $(git rev-parse --abbrev-ref HEAD)
